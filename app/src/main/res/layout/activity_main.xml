@@ -13,8 +13,11 @@
             android:layout_marginTop="20dp"
             android:text=""
             android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:textStyle="bold" tools:visibility="visible"/>
     <ImageView
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:id="@+id/imageView"

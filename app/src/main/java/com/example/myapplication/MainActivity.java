@@ -136,9 +136,11 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
             }
-            if (isCorrect) {
-                score++;
-                System.out.println("AAAAAAAAAAAAAAAAAAAAAA" + score);
+            if (!selectedOptionIndices.isEmpty()) {
+                if (isCorrect) {
+                    score++;
+                    System.out.println("AAAAAAAAAAAAAAAAAAAAAA" + score);
+                }
             }
             qnumber++;
             if (returned) {
@@ -168,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 rg.setVisibility(View.INVISIBLE);
                 tv1.setText("");
-                tv2.setText("Wynik testu: " + score + "/" + (qS.length-1));
+                tv2.setText("Wynik testu: " + score + "/" + (qS.length - 1));
                 returned = true;
                 qnumber = 0;
                 score = 0;
@@ -177,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     public void setImg(ImageView img, String imageFileName) {
         try {
             InputStream inputStream = getAssets().open(imageFileName);
